@@ -1,3 +1,10 @@
 <header>
-  <h1>show</h1>
+  <h1>タスク No.<%= @task.id %></h1>
 </header>
+<body>
+  <p>タスク: <%= @task.content %></p>
+  
+  <%= link_to 'タスクリストへ', root_path %>
+  <%= link_to '編集', edit_task_path(@task) %>
+  <%= link_to '削除', @task, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+</body>

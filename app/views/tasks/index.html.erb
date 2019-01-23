@@ -1,3 +1,13 @@
 <header>
-  <h1>index</h1>
+  <h1>タスクリストApp</h1>
 </header>
+<body>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li><%= task.id %>: <%= link_to task.content, task %></li>
+    <% end %>
+  </ul>
+  
+  <%= link_to "新規タスク", new_task_path %>
+  
+</body>
