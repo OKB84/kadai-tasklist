@@ -1,3 +1,3 @@
 class Task < ApplicationRecord
-  validates :content, length: { in: 1..255 }
+  validates :content, presence: true, length: { maximum: 255 }
 end
