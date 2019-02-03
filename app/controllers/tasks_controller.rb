@@ -8,7 +8,7 @@ class TasksController < ApplicationController
     
     if @task.save
       flash[:success] = 'タスクが正常に投稿されました'
-      redirect_to @task
+      redirect_to root_url
     else
       flash.now[:denger] = 'タスクが投稿されませんでした'
       @tasks = current_user.tasks.order('created_at DESC').page(params[:page]).per(10)
