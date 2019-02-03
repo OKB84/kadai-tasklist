@@ -1,5 +1,23 @@
 <% if logged_in? %>
-  <p>ログイン完了ユーザー：<%= current_user.name %></p>  
+  <div class="row">
+    
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">新規タスク投稿</h3>
+        </div>
+        <div class="panel-body">
+          <%= render 'tasks/form', task: @task %>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-8">
+      <h2><%= current_user.name %> さんのタスク一覧</h2>    
+      <%= render 'tasks/tasks', tasks: @tasks %>
+    </div>
+    
+  </div>
 <% else %>
   <div class="center jumbotron">
     <div class="text-center">

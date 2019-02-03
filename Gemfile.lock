@@ -169,7 +169,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
   jquery-rails
-  kaminari (~> 0.17.0)
+  kaminari
   listen (~> 3.0.5)
   mysql2 (>= 0.3.18, < 0.5)
   pg (= 0.21.0)
